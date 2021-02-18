@@ -579,6 +579,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &705507995
@@ -674,6 +675,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &799173024
 Canvas:
   m_ObjectHideFlags: 0
@@ -724,10 +726,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427cbdc0e4187cb4abb78e0c4b17a837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox1: {fileID: 1393519691}
-  textbox2: {fileID: 1376763503}
-  timer: 10
-  score: 0
+  scoreTextbox: {fileID: 1376763503}
+  timerTextbox: {fileID: 1393519691}
+  timer: 20
+  score: 42
 --- !u!4 &927185377
 Transform:
   m_ObjectHideFlags: 0
