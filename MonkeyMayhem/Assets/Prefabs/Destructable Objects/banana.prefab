@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4471556735492980568}
   - component: {fileID: 1867549504597691282}
   - component: {fileID: 1020993031048183109}
+  - component: {fileID: 8346250787755417316}
   m_Layer: 0
   m_Name: banana
   m_TagString: Untagged
@@ -97,3 +98,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: -5354028657143720620, guid: a5a122363853b1542921a4c44b25252b, type: 3}
   particleSystem: {fileID: 9000699472623327925, guid: ecfbdc167e3ce064a8a22f0ed92c32ee, type: 3}
+  physicsEnabledDistance: 2
+--- !u!136 &8346250787755417316
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210017789047417415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.41
+  m_Height: 2.05
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.29370058, z: 0}

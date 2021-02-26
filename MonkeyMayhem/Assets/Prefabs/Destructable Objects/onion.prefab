@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3214227185503658628}
   - component: {fileID: 828607156563056206}
   - component: {fileID: 2071190118058314041}
+  - component: {fileID: 2515612020464931871}
   m_Layer: 0
   m_Name: onion
   m_TagString: Untagged
@@ -96,3 +97,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 0}
   particleSystem: {fileID: 4049533011340471929, guid: 835e22e85cf1e314e9a09991ac4473cc, type: 3}
+  physicsEnabledDistance: 2
+--- !u!135 &2515612020464931871
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188723397159696283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.37499997
+  m_Center: {x: 0, y: 0.37499997, z: 0}

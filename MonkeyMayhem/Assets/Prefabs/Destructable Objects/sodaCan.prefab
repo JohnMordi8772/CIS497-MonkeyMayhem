@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 917369312966161773}
   - component: {fileID: 3125447351009919399}
   - component: {fileID: 4368003935360076263}
+  - component: {fileID: 8389952106774028326}
   m_Layer: 0
   m_Name: sodaCan
   m_TagString: Untagged
@@ -99,3 +100,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: -532782045497273310, guid: 51826e68398a15e439b6cc9c9e1d6ad2, type: 3}
   particleSystem: {fileID: 766525203591177638, guid: f6cbb337ddd09d54db401bf43c5bf321, type: 3}
+  physicsEnabledDistance: 2
+--- !u!136 &8389952106774028326
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485554931875602546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.33696
+  m_Height: 0.98999995
+  m_Direction: 1
+  m_Center: {x: -7.423811e-33, y: 0.49499997, z: 0}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1589068457551152749}
   - component: {fileID: 3596535649224471207}
   - component: {fileID: 2749697985278395813}
+  - component: {fileID: 3572564169313976659}
   m_Layer: 0
   m_Name: canSmall
   m_TagString: Untagged
@@ -98,3 +99,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 0}
   particleSystem: {fileID: 3003165943429897573, guid: 8b55bf01c08c5154f9d2427e79910422, type: 3}
+  physicsEnabledDistance: 2
+--- !u!65 &3572564169313976659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092154824563757938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 0.42157558, z: 0.9}
+  m_Center: {x: 0, y: 0.21078779, z: 0}

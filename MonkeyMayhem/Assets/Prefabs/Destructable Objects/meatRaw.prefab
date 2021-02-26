@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6223254523910633601}
   - component: {fileID: 8194728664506158155}
   - component: {fileID: 7383673493883366049}
+  - component: {fileID: -5145349259029196696}
   m_Layer: 0
   m_Name: meatRaw
   m_TagString: Untagged
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 0}
   particleSystem: {fileID: 955327930188074718, guid: 1ebca24e4f993dd4483312ec1750fca4, type: 3}
+  physicsEnabledDistance: 2
+--- !u!65 &-5145349259029196696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690312244079783326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4354825, y: 0.19349998, z: 1.7261195}
+  m_Center: {x: 0, y: 0.09674999, z: 0}

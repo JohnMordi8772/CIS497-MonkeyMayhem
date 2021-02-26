@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4723902506796707254}
   - component: {fileID: 7379811015847909756}
   - component: {fileID: 8190867555505917800}
+  - component: {fileID: -5508037007687266589}
   m_Layer: 0
   m_Name: wineWhite
   m_TagString: Untagged
@@ -98,3 +99,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 7922251121040759823, guid: d38fa20de7eb6bc47956ff5eebd0c5cd, type: 3}
   particleSystem: {fileID: 766525203591177638, guid: f6cbb337ddd09d54db401bf43c5bf321, type: 3}
+  physicsEnabledDistance: 2
+--- !u!136 &-5508037007687266589
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037219722882365609}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3042
+  m_Height: 1.9668
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.91859996, z: 0}

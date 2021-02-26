@@ -27,10 +27,6 @@ public class MouseLook : MonoBehaviour
             gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, (Mathf.Atan(-mouseY / mouseX)) * (180f / Mathf.PI) + 180f, 0));
         //} 
 
-        //gameObject.transform.Rotate(new Vector3(0,Mathf.Atan(-mouseY/mouseX)*(180/Mathf.PI), 0));
-        //mouseX += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        //mouseY -= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
 
 
     }

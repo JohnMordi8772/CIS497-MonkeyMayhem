@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1693981126283568599}
   - component: {fileID: 3487700988700774685}
   - component: {fileID: 2857349468049987733}
+  - component: {fileID: 4578930509173762750}
   m_Layer: 0
   m_Name: fish
   m_TagString: Untagged
@@ -98,3 +99,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 0}
   particleSystem: {fileID: 955327930188074718, guid: 1ebca24e4f993dd4483312ec1750fca4, type: 3}
+  physicsEnabledDistance: 2
+--- !u!136 &4578930509173762750
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127241838606840008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.93117386
+  m_Height: 0.9666033
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.48330164, z: 0}

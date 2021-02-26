@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7082328581374351533}
   - component: {fileID: 5020822110914407527}
   - component: {fileID: 5939155793155606561}
+  - component: {fileID: 7418551825828226684}
   m_Layer: 0
   m_Name: loaf
   m_TagString: Untagged
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 0}
   particleSystem: {fileID: 846738609217397431, guid: 7565f3e0fce67a146875b6317fdaac3f, type: 3}
+  physicsEnabledDistance: 2
+--- !u!65 &7418551825828226684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822240316139326898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.739232, y: 1.3269616, z: 1.0977119}
+  m_Center: {x: 0, y: 0.6634808, z: 0}

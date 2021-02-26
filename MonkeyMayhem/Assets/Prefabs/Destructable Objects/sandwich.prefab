@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 2318276933230905194}
   - component: {fileID: 560939906078421920}
   - component: {fileID: 1155541086159963575}
+  - component: {fileID: 3760700789141765169}
   m_Layer: 0
   m_Name: sandwich
   m_TagString: Untagged
@@ -181,6 +182,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 0}
   particleSystem: {fileID: 846738609217397431, guid: 7565f3e0fce67a146875b6317fdaac3f, type: 3}
+  physicsEnabledDistance: 2
+--- !u!65 &3760700789141765169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073951262395241077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0527014, y: 0.47947258, z: 1.0564729}
+  m_Center: {x: 0, y: 0.23973629, z: 0}
 --- !u!1 &4090230994855381746
 GameObject:
   m_ObjectHideFlags: 0

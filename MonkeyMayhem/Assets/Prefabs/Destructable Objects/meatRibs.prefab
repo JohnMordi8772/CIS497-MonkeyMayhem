@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3826246333269608515}
   - component: {fileID: 1368383510028352649}
   - component: {fileID: 377436146565522686}
+  - component: {fileID: -4787742229718668871}
   m_Layer: 0
   m_Name: meatRibs
   m_TagString: Untagged
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 0}
   particleSystem: {fileID: 955327930188074718, guid: 1ebca24e4f993dd4483312ec1750fca4, type: 3}
+  physicsEnabledDistance: 2
+--- !u!65 &-4787742229718668871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719878838482525532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6061625, y: 0.17999999, z: 1.1501335}
+  m_Center: {x: 0, y: 0.089999996, z: 0}

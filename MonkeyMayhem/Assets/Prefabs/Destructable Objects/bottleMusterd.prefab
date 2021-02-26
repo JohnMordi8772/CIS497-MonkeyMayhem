@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7058914702064534152}
   - component: {fileID: 5049303519690372674}
   - component: {fileID: 5896108485526378653}
+  - component: {fileID: -6946861421060513375}
   m_Layer: 0
   m_Name: bottleMusterd
   m_TagString: Untagged
@@ -96,3 +97,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: -5354028657143720620, guid: 2b764c61349ebbb45893e1481d22fd39, type: 3}
   particleSystem: {fileID: 766525203591177638, guid: f6cbb337ddd09d54db401bf43c5bf321, type: 3}
+  physicsEnabledDistance: 2
+--- !u!136 &-6946861421060513375
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6706500569599154071}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.1999998
+  m_Height: 5.669999
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.8349996, z: 0}
