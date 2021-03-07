@@ -5,12 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour, ISubject
 {
     private Animator anim;
-
     private bool moved = false;
-
     private List<IObserver> observers = new List<IObserver>();
-
     public Camera cam;
+    public AudioSource monkeyAudioPlayer;
+    public AudioClip[] monkeySounds;
 
     public void NotifyObservers()
     {
@@ -69,6 +68,12 @@ public class PlayerController : MonoBehaviour, ISubject
             gameObject.transform.Translate(Vector3.forward * 10 * Time.deltaTime);
             moved = true;
             NotifyObservers();
+        }
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            monkeyAudioPlayer.pitch = 1f;
+            monkeyAudioPlayer.PlayOneShot(monkeySounds[Random.Range(0,7)]);
+            //monkeySound.PlayOneShot(monkeySound.clip);
         }
 
         if (moved != anim.GetBool("moved"))
