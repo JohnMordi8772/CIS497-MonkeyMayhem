@@ -2898,7 +2898,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  monkeySound: {fileID: 0}
+  monkeyAudioPlayer: {fileID: 0}
+  monkeySounds: []
 --- !u!114 &591929889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4905,7 +4906,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548319397}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!82 &963194229
 AudioSource:
@@ -7780,8 +7781,8 @@ Transform:
   m_LocalPosition: {x: -79.171, y: 3.557, z: -40.1}
   m_LocalScale: {x: 2.2772598, y: 2.2772584, z: 2.2772598}
   m_Children:
-  - {fileID: 963194228}
   - {fileID: 2007015693}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7798,7 +7799,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  monkeySound: {fileID: 1548319400}
+  monkeyAudioPlayer: {fileID: 0}
+  monkeySounds:
+  - {fileID: 8300000, guid: 9daea0211c0613b45a11de275b2f4373, type: 3}
+  - {fileID: 8300000, guid: 612d00e9e8ff6204d8f6a714beefc826, type: 3}
+  - {fileID: 8300000, guid: 18e783ffd3417c443802cb93d5d4aafb, type: 3}
+  - {fileID: 8300000, guid: 5fa8fd2ed700dc140b49267a7508fb11, type: 3}
+  - {fileID: 8300000, guid: 1023e7fdb1016c047868eaaf1d1ce9ee, type: 3}
+  - {fileID: 8300000, guid: 64be1cca01853df4185e85922b2c5e1c, type: 3}
+  - {fileID: 8300000, guid: 69dbd39a1035a1847ab0622ee4666f74, type: 3}
+  - {fileID: 8300000, guid: a3a849808702db5429db782d210d45db, type: 3}
 --- !u!114 &1548319399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8653,7 +8663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417982, guid: 93f04cad4f1239a42a1c0b64a6fec50e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 417982, guid: 93f04cad4f1239a42a1c0b64a6fec50e, type: 3}
       propertyPath: m_LocalPosition.x

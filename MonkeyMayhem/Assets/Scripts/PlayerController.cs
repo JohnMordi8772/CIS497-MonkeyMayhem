@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour, ISubject
     private bool moved = false;
     private List<IObserver> observers = new List<IObserver>();
     public Camera cam;
-    public AudioSource monkeySound;
+    public AudioSource monkeyAudioPlayer;
+    public AudioClip[] monkeySounds;
 
     public void NotifyObservers()
     {
@@ -69,8 +70,8 @@ public class PlayerController : MonoBehaviour, ISubject
         }
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            monkeySound.pitch = 1f;
-            monkeySound.Play();
+            monkeyAudioPlayer.pitch = 1f;
+            monkeyAudioPlayer.PlayOneShot(monkeySounds[Random.Range(0,7)]);
             //monkeySound.PlayOneShot(monkeySound.clip);
         }
 
