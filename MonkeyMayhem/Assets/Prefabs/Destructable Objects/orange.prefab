@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1883628603275707804}
   - component: {fileID: 1000480393400030784}
   - component: {fileID: -5938568910715110570}
+  - component: {fileID: 8730127263482831734}
   m_Layer: 0
   m_Name: orange
   m_TagString: Untagged
@@ -96,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da14218d84dc4e4c8b76077bae9e792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 4156002973242278026, guid: e4f270c517bf48e4a857bf7d275b244a, type: 3}
-  particleSystem: {fileID: 9000699472623327925, guid: ecfbdc167e3ce064a8a22f0ed92c32ee, type: 3}
+  itemType: 3
+  itemDensity: 0
   physicsEnabledDistance: 2
 --- !u!135 &-5938568910715110570
 SphereCollider:
@@ -112,3 +113,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.254538
   m_Center: {x: 0, y: 0.24329998, z: 0}
+--- !u!54 &8730127263482831734
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81911744429827145}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

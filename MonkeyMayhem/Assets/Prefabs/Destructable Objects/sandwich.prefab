@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 560939906078421920}
   - component: {fileID: 1155541086159963575}
   - component: {fileID: 3760700789141765169}
+  - component: {fileID: 2784557566149515732}
   m_Layer: 0
   m_Name: sandwich
   m_TagString: Untagged
@@ -180,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da14218d84dc4e4c8b76077bae9e792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 0}
-  particleSystem: {fileID: 846738609217397431, guid: 7565f3e0fce67a146875b6317fdaac3f, type: 3}
+  itemType: 0
+  itemDensity: 0
   physicsEnabledDistance: 2
 --- !u!65 &3760700789141765169
 BoxCollider:
@@ -196,6 +197,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0527014, y: 0.47947258, z: 1.0564729}
   m_Center: {x: 0, y: 0.23973629, z: 0}
+--- !u!54 &2784557566149515732
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073951262395241077}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4090230994855381746
 GameObject:
   m_ObjectHideFlags: 0

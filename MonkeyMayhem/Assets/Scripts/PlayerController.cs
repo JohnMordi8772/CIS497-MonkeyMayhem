@@ -16,14 +16,14 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         foreach (IObserver observer in observers)
         {
-            observer.UpdateData(transform.position, cam.transform.forward);
+            //observer.UpdateData(transform.position, cam.transform.forward);
         }
     }
 
     public void RegisterObserver(IObserver observer)
     {
         observers.Add(observer);
-        observer.UpdateData(transform.position, cam.transform.forward);
+        //observer.UpdateData(transform.position, cam.transform.forward);
     }
 
     public void RemoveObserver(IObserver observer)
@@ -35,9 +35,10 @@ public class PlayerController : MonoBehaviour, ISubject
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         anim = transform.Find("MrMo_A").GetComponent<Animator>();
+        cam = transform.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame

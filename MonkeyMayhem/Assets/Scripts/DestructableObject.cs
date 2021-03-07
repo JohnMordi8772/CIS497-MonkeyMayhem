@@ -1,45 +1,85 @@
-using System.Collections;
-using System.Collections.Generic;
+/*
+ * Ashton Lively
+ * DestructableObject.cs
+ * Project 2
+ * Properties and behaviors of destructable objects
+ */
 using UnityEngine;
 
 public class DestructableObject : MonoBehaviour, IObserver
 {
-    [Tooltip("Material for particle system.")]
-    public Material particleMaterial;
+    public enum ItemType { BREAD, CAN, CHEESE, FRUIT, LIQUID, MEAT} 
+    public ItemType itemType;
 
-    [Tooltip("Particle system when destroyed.")]
-    public ParticleSystem particleSystem;
-
+    public enum ItemDensity { HARD, HEAVY, SOFT, RUBBERY }
+    public ItemDensity itemDensity;
+    
     private GameObject player;
 
     private void Start()
     {
         player = GameObject.Find("Player");
         player.GetComponent<PlayerController>().RegisterObserver(this);
+
+        PhysicsBehavior phys = null;
+
+        switch (itemDensity)
+        {
+            case ItemDensity.HARD:
+                phys = new HardItem();
+                break;
+            case ItemDensity.HEAVY:
+                phys = new HeavyItem();
+                break;
+            case ItemDensity.SOFT:
+                phys = new SoftItem();
+                break;
+            case ItemDensity.RUBBERY:
+                phys = new RubberyItem();
+                break;
+        }
+        phys.UpdatePhysicMaterial(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         // Check for player collision
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            // IF this code is moved to monkey collision, the following 
-            gameObject.GetComponent<MeshCollider>().enabled = false;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<Collider>().enabled = false;
 
-            // Spawn particle system
-            ParticleSystem particles = Instantiate(particleSystem, transform.position, Quaternion.LookRotation(player.transform.position));
-            if (particles.GetComponent<ParticleSystemRenderer>().material == null)
-                particles.GetComponent<ParticleSystemRenderer>().material = particleMaterial;
+            foreach (Transform child in transform)
+            {
+                child.GetComponent<MeshRenderer>().enabled = false;
+            }
 
-            // Remove from observers list 
-            player.GetComponent<PlayerController>().RemoveObserver(this);
+            if (gameObject.GetComponent<MeshRenderer>() != null)
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
 
-            // Destroy particles
-            Destroy(particles, particles.startLifetime);
+            ParticleBehavior pb = null;
 
-            // Destroy object
-            Destroy(gameObject, particles.startLifetime);
+            switch (itemType) {
+                case ItemType.BREAD:
+                    pb = new BreadItem();
+                    break;
+                case ItemType.CAN:
+                    pb = new CanItem();
+                    break;
+                case ItemType.CHEESE:
+                    pb = new CheeseItem();
+                    break;
+                case ItemType.FRUIT:
+                    pb = new FruitItem();
+                    break;
+                case ItemType.LIQUID:
+                    pb = new LiquidItem();
+                    break;
+                case ItemType.MEAT:
+                    pb = new MeatItem();
+                    break;
+            }
+
+            pb.InstantiateParticles(transform.position, this.gameObject);
         }
     }
 

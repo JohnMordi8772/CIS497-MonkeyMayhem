@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8273868143393126486}
   - component: {fileID: 6140192400415313052}
   - component: {fileID: 4825551841039679914}
-  - component: {fileID: 4825551841039679829}
   - component: {fileID: 4825551841039679825}
+  - component: {fileID: 8642491966643299543}
   m_Layer: 0
   m_Name: apple
   m_TagString: Untagged
@@ -102,20 +102,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &4825551841039679829
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5635872323100831049}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3645058858012553506, guid: 2670b09b5c624974a9150e749d2cc586, type: 3}
 --- !u!114 &4825551841039679825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,5 +114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da14218d84dc4e4c8b76077bae9e792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 0}
-  particleSystem: {fileID: 9071386735899687681, guid: 6320153abf47c5a45a2c03f6b7c532f1, type: 3}
+  itemType: 3
+  itemDensity: 0
+  physicsEnabledDistance: 2
+--- !u!135 &8642491966643299543
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635872323100831049}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.29444182
+  m_Center: {x: 0, y: 0.28613007, z: 0}
