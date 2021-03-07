@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class DestructableObject : MonoBehaviour, IObserver
 {
-    public enum ItemType { BREAD, CAN, CHEESE, FRUIT, LIQUID, MEAT} 
+    public enum ItemType { BREAD, CAN, CHEESE, FRUIT, LIQUID, MEAT, SHELF} 
     public ItemType itemType;
 
     public enum ItemDensity { HARD, HEAVY, SOFT, RUBBERY }
@@ -76,6 +76,9 @@ public class DestructableObject : MonoBehaviour, IObserver
                     break;
                 case ItemType.MEAT:
                     pb = new MeatItem();
+                    break;
+                case ItemType.SHELF:
+                    pb = new ShelfItem();
                     break;
             }
 

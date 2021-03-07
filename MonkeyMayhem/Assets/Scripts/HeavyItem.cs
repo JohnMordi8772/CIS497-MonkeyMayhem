@@ -12,6 +12,6 @@ public class HeavyItem : PhysicsBehavior
     {
         PhysicMaterial pm = Resources.Load<PhysicMaterial>("Physic Materials/Heavy");
 
-        obj.GetComponent<Collider>().material = pm;
+       // obj.GetComponent<Collider>().material = pm;
     }
 }

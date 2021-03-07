@@ -21,11 +21,22 @@ public class MouseLook : MonoBehaviour
         text.text = "Mouse Y: " + mouseY + " Mouse X: " + mouseX;
         //if (Input.GetAxisRaw("Mouse X") != 0 && Input.GetAxisRaw("Mouse Y") != 0)
         //{
-        if(mouseX > 0)
-            gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, (Mathf.Atan(-mouseY/ mouseX)) * (180f / Mathf.PI), 0));
+
+        float yRot = 0;
+        if (mouseY == 0)
+        {
+            yRot = 0;
+        }
         else
-            gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, (Mathf.Atan(-mouseY / mouseX)) * (180f / Mathf.PI) + 180f, 0));
-        //} 
+        {
+            yRot = Mathf.Atan(-mouseY / mouseX);
+        }
+
+        if (mouseX > 0)
+            gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, yRot * (180f / Mathf.PI), 0));
+        else
+            gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, yRot * (180f / Mathf.PI) + 180f, 0));
+            //} 
 
 
 
