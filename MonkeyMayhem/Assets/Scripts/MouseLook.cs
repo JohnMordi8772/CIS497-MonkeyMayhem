@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
-    private float mouseX, mouseY, mouseZ, mouseSensitivity = 55;
+    private float mouseX, mouseY;
     public Text text;
     // Start is called before the first frame update
     void Start()

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour, ISubject
     public Camera cam;
     public AudioSource monkeyAudioPlayer;
     public AudioClip[] monkeySounds;
+    private bool mime = false;
 
     public void NotifyObservers()
     {
@@ -31,6 +32,40 @@ public class PlayerController : MonoBehaviour, ISubject
         {
             observers.Remove(observer);
         }
+    }
+
+    public void MimeStatus()
+    {
+        if(mime)
+        {
+            mime = false;
+            gameObject.tag = "Player";
+        }
+        else
+        {
+            mime = true;
+            gameObject.tag = "Mime";
+        }
+    }
+
+    public void MimePowerUpAct()
+    {
+        StartCoroutine(MimePowerUp());
+    }
+
+    private IEnumerator MimePowerUp()
+    {
+        MimeStatus();
+        gameObject.GetComponent<Collider>().isTrigger = true;
+        gameObject.GetComponent<Rigidbody>().useGravity = false;
+
+        yield return new WaitForSeconds(5);
+
+        MimeStatus();
+        gameObject.GetComponent<Collider>().isTrigger = false;
+        gameObject.GetComponent<Rigidbody>().useGravity = true;
+
+        yield break;
     }
 
     // Start is called before the first frame update
