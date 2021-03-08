@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         anim = transform.Find("MrMo_A").GetComponent<Animator>();
         score = new Score();
-        //cam = transform.Find("Main Camera").GetComponent<Camera>();
+        cam = transform.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
