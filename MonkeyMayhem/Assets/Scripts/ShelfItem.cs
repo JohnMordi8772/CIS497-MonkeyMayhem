@@ -10,10 +10,9 @@ public class ShelfItem : ParticleBehavior
 {
     public override void InstantiateParticles(Vector3 pos, GameObject obj)
     {
-        obj.transform.parent.transform.Find("glass").GetComponent<MeshRenderer>().enabled = false;
+        obj.transform.Find("glass").GetComponent<MeshRenderer>().enabled = false;
 
         GameObject shelf = Resources.Load<GameObject>("Particle Systems/Shelf Particles");
-        Debug.Log(shelf.name);
 
         GameObject ps = Instantiate(shelf, pos, Quaternion.identity);
 

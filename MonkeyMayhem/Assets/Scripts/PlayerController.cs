@@ -16,22 +16,20 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         foreach (IObserver observer in observers)
         {
-           // observer.UpdateData(transform.position, cam.transform.forward);
+            observer.UpdateData(transform.position);
         }
     }
 
     public void RegisterObserver(IObserver observer)
     {
         observers.Add(observer);
-       // observer.UpdateData(transform.position, cam.transform.forward);
+        observer.UpdateData(transform.position);
     }
 
     public void RemoveObserver(IObserver observer)
     {
-        if (observers.Contains(observer))
-        {
-            observers.Remove(observer);
-        }
+        observers.Remove(observer);
+        Debug.Log("Removed.");
     }
 
     public void MimeStatus()
@@ -72,7 +70,8 @@ public class PlayerController : MonoBehaviour, ISubject
     void Awake()
     {
         anim = transform.Find("MrMo_A").GetComponent<Animator>();
-        //cam = transform.Find("Main Camera").GetComponent<Camera>();
+        if (transform.Find("Main Camera") != null)
+            cam = transform.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame

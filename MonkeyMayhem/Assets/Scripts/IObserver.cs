@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IObserver
 {
-    void UpdateData(Vector3 playerPos, Vector3 cameraDirection);
+    void UpdateData(Vector3 playerPos);
 }

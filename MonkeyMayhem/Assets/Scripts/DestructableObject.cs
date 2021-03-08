@@ -4,6 +4,8 @@
  * Project 2
  * Properties and behaviors of destructable objects
  */
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DestructableObject : MonoBehaviour, IObserver
@@ -16,8 +18,25 @@ public class DestructableObject : MonoBehaviour, IObserver
     
     private GameObject player;
 
+    List<GameObject> colliderItems = new List<GameObject>();
+    Transform[] children;
+
     private void Start()
     {
+        children = gameObject.GetComponentsInChildren<Transform>();
+
+        if (gameObject.GetComponent<Collider>() == true)
+        {
+            colliderItems.Add(gameObject);
+        }
+        foreach (Transform obj in children)
+        {
+            if (obj.gameObject.GetComponent<Collider>() == true)
+            {
+                colliderItems.Add(obj.gameObject);
+            }
+        }
+
         player = GameObject.Find("Player");
         player.GetComponent<PlayerController>().RegisterObserver(this);
 
@@ -51,6 +70,7 @@ public class DestructableObject : MonoBehaviour, IObserver
             Collider[] colliders = gameObject.GetComponents<Collider>();
             foreach(Collider collider in colliders)
             {
+                colliderItems.Remove(collider.gameObject);
                 collider.enabled = false;
             }
 
@@ -88,61 +108,45 @@ public class DestructableObject : MonoBehaviour, IObserver
                     break;
             }
 
-            pb.InstantiateParticles(collision.contacts[0].point, this.gameObject);
+            if (gameObject.transform.parent == true)
+                pb.InstantiateParticles(collision.contacts[0].point, gameObject.transform.parent.gameObject);
+            else
+                pb.InstantiateParticles(collision.contacts[0].point, gameObject);
+
         }
     }
 
     [Tooltip("Distance player has to be to object to activate physics.")]
-    public float physicsEnabledDistance = 6f;
+    private float physicsEnabledDistance = 1000f;
 
-    public void UpdateData(Vector3 playerPos, Vector3 cameraDirection)
+    public void UpdateData(Vector3 playerPos)
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
+        float distanceToPlayer = Mathf.Abs(Vector3.Distance(transform.position, playerPos));
 
-        if (GetComponent<Collider>() == true)
+        if (distanceToPlayer <= physicsEnabledDistance)
         {
-            if (distanceToPlayer <= physicsEnabledDistance)
+            foreach (GameObject obj in colliderItems)
             {
-                if (GetComponent<Collider>().enabled == false)
+                if (obj == true)
                 {
-                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                    GetComponent<Collider>().enabled = true;
+                    obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    obj.GetComponent<Collider>().enabled = true;
                 }
-            }
-            else
-            {
-                if (GetComponent<Collider>().enabled == true)
-                {
-                    //GetComponent<Rigidbody>().freezeRotation = true;
-                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                    GetComponent<Collider>().enabled = false;
-                }
+                
             }
         }
-        /*else
+        else if (distanceToPlayer >= physicsEnabledDistance)
         {
-            if (distanceToPlayer <= physicsEnabledDistance)
+            Debug.Log(distanceToPlayer);
+            foreach (GameObject obj in colliderItems)
             {
-                //GameObject[] childrenColl = gameObject.transform.parent.transform.GetComponents<Collider>();
-
-                if (.enabled == false)
+                if (obj == true)
                 {
-                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                    GetComponent<Collider>().enabled = true;
+                    obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                    obj.GetComponent<Collider>().enabled = false;
                 }
+                
             }
-            else
-            {
-                if (GetComponent<Collider>().enabled == true)
-                {
-                    //GetComponent<Rigidbody>().freezeRotation = true;
-                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                    GetComponent<Collider>().enabled = false;
-                }
-            }
-        }*/
-        
-
-        // Debug.Log(Vector3.Angle(cameraDirection, transform.position));
+        }
     }
 }
