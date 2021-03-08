@@ -1,3 +1,9 @@
+/*
+ * John Mordi
+ * MouseLook.cs
+ * Project 2
+ * Allows player to rotate character using mouse
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

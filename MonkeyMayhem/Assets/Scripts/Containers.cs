@@ -1,3 +1,9 @@
+/*
+ * Luke Alcazar, John Mordi
+ * Containers.cs
+ * Project 2
+ * Increment score in the case of a containers object
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

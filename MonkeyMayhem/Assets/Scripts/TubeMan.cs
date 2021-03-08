@@ -1,3 +1,9 @@
+/*
+ * John Mordi
+ * TubeMan.cs
+ * Project 2
+ * Interactable that bounces the player away with a silly boing
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
