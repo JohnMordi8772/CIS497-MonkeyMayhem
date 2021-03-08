@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour, ISubject
     public AudioClip[] monkeySounds;
     public AudioSource backGroundMusic;
     private bool mime = false;
+    public static Score score;
 
     public void NotifyObservers()
     {
@@ -73,6 +74,8 @@ public class PlayerController : MonoBehaviour, ISubject
         yield break;
     }
 
+    
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -85,31 +88,31 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         moved = false;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && !GameEvent.gameOver)
         {
             gameObject.transform.Translate(Vector3.left * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !GameEvent.gameOver)
         {
             gameObject.transform.Translate(Vector3.back * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && !GameEvent.gameOver)
         {
             gameObject.transform.Translate(Vector3.right * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !GameEvent.gameOver)
         {
             gameObject.transform.Translate(Vector3.forward * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.Q) && !GameEvent.gameOver)
         {
             monkeyAudioPlayer.pitch = 1f;
             monkeyAudioPlayer.PlayOneShot(monkeySounds[Random.Range(0,7)]);
@@ -122,5 +125,21 @@ public class PlayerController : MonoBehaviour, ISubject
         }
 
 
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Produce"))
+        {
+            score = new Produce();
+            score.AddPoints();
+            
+        }
+        else if (collision.gameObject.CompareTag("Containers"))
+        {
+            score = new Containers();
+            score.AddPoints();
+            
+        }
     }
 }
