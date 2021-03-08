@@ -18,14 +18,14 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         foreach (IObserver observer in observers)
         {
-           // observer.UpdateData(transform.position, cam.transform.forward);
+           observer.UpdateData(transform.position);
         }
     }
 
     public void RegisterObserver(IObserver observer)
     {
         observers.Add(observer);
-       // observer.UpdateData(transform.position, cam.transform.forward);
+       observer.UpdateData(transform.position);
     }
 
     public void RemoveObserver(IObserver observer)
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         anim = transform.Find("MrMo_A").GetComponent<Animator>();
         score = new Score();
-        //cam = transform.Find("Main Camera").GetComponent<Camera>();
+        cam = transform.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
