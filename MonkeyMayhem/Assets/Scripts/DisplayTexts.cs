@@ -6,38 +6,42 @@ using UnityEngine.SceneManagement;
 
 public class DisplayTexts : MonoBehaviour
 {
+
+    public GameObject player;
     public Text scoreTextbox;
     public Text timerTextbox;
-    public int timer = 20;
-    public int score = 0;
 
     void Start()
     {
-        scoreTextbox.text = "Score: ";
         StartCoroutine("countdown");
+        scoreTextbox.text = "Score: 0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreTextbox.text = "Score: " + score;
+        scoreTextbox.text = "Score: " + player.GetComponent<PlayerController>().score.totalPoints;
+        timerTextbox.text = "TIME: " + GameEvent.timer;
     }
+
 
     public IEnumerator countdown()
     {
-        while(timer >= 0)
+        while (GameEvent.timer >= 0 && !GameEvent.gameOver)
         {
-            timer--;
-            timerTextbox.text = "TIME: " + timer;
+            GameEvent.timer--;
+            timerTextbox.text = "TIME: " + GameEvent.timer;
 
-            if(timer > 0)
+            if (GameEvent.timer > 0)
             {
                 yield return new WaitForSeconds(1);
-            }else if(timer == 0){
+            }
+            else if (GameEvent.timer == 0)
+            {
+                GameEvent.gameOver = true;
                 timerTextbox.text = "Game Over";
                 yield break;
             }
         }
     }
-
 }
