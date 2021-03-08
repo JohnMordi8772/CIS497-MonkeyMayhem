@@ -120,6 +120,10 @@ public class PlayerController : MonoBehaviour, ISubject
             //monkeySound.PlayOneShot(monkeySound.clip);
         }
 
+        float xClamp = Mathf.Clamp(transform.position.x, -173.1f, 60.7f);
+        float zClamp = Mathf.Clamp(transform.position.z, -49.17f, 251f);
+        transform.position = new Vector3(xClamp, transform.position.y, zClamp);
+
         if (moved != anim.GetBool("moved"))
         {
             anim.SetBool("moved", moved);
