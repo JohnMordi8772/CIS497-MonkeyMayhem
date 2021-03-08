@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour, ISubject
     public Camera cam;
     public AudioSource monkeyAudioPlayer;
     public AudioClip[] monkeySounds;
+    public AudioSource backGroundMusic;
     private bool mime = false;
 
     public void NotifyObservers()
@@ -56,14 +57,18 @@ public class PlayerController : MonoBehaviour, ISubject
     private IEnumerator MimePowerUp()
     {
         MimeStatus();
+        backGroundMusic.Stop();
+        backGroundMusic.PlayOneShot(monkeySounds[9]);
         gameObject.GetComponent<Collider>().isTrigger = true;
         gameObject.GetComponent<Rigidbody>().useGravity = false;
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(30);
 
         MimeStatus();
         gameObject.GetComponent<Collider>().isTrigger = false;
         gameObject.GetComponent<Rigidbody>().useGravity = true;
+        backGroundMusic.Stop();
+        backGroundMusic.Play();
 
         yield break;
     }
@@ -82,25 +87,25 @@ public class PlayerController : MonoBehaviour, ISubject
 
         if (Input.GetKey(KeyCode.W))
         {
-            gameObject.transform.Translate(Vector3.left * 10 * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.left * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }
         if (Input.GetKey(KeyCode.A))
         {
-            gameObject.transform.Translate(Vector3.back * 10 * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.back * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }
         if (Input.GetKey(KeyCode.S))
         {
-            gameObject.transform.Translate(Vector3.right * 10 * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.right * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }
         if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.Translate(Vector3.forward * 10 * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.forward * 20 * Time.deltaTime);
             moved = true;
             NotifyObservers();
         }

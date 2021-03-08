@@ -3961,6 +3961,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   monkeyAudioPlayer: {fileID: 0}
   monkeySounds: []
+  backGroundMusic: {fileID: 0}
 --- !u!114 &591929889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10139,6 +10140,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 64be1cca01853df4185e85922b2c5e1c, type: 3}
   - {fileID: 8300000, guid: 69dbd39a1035a1847ab0622ee4666f74, type: 3}
   - {fileID: 8300000, guid: a3a849808702db5429db782d210d45db, type: 3}
+  - {fileID: 8300000, guid: 3e1826b6fabef7a42b76f2c5dc4feb7e, type: 3}
+  - {fileID: 8300000, guid: e05ca8ca72c46c64694918df866f4652, type: 3}
+  backGroundMusic: {fileID: 963194229}
 --- !u!114 &1548319399
 MonoBehaviour:
   m_ObjectHideFlags: 0
