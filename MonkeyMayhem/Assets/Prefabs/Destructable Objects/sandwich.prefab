@@ -182,8 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 0
-  itemDensity: 0
-  physicsEnabledDistance: 2
+  itemDensity: 2
 --- !u!65 &3760700789141765169
 BoxCollider:
   m_ObjectHideFlags: 0

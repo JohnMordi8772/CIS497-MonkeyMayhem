@@ -9,6 +9,6 @@ PhysicMaterial:
   m_Name: Heavy
   dynamicFriction: 1.24
   staticFriction: 1.39
-  bounciness: 0
+  bounciness: 0.18
   frictionCombine: 0
   bounceCombine: 0

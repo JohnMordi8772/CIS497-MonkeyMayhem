@@ -117,7 +117,7 @@ public class DestructableObject : MonoBehaviour, IObserver
     }
 
     [Tooltip("Distance player has to be to object to activate physics.")]
-    private float physicsEnabledDistance = 1000f;
+    private float physicsEnabledDistance = 2000f;
 
     public void UpdateData(Vector3 playerPos)
     {

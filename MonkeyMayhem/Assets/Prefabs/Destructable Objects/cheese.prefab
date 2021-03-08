@@ -224,9 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da14218d84dc4e4c8b76077bae9e792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 2
   itemDensity: 3
-  physicsEnabledDistance: 2
 --- !u!114 &3353861506310284791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 2
   itemDensity: 0
-  physicsEnabledDistance: 2
 --- !u!136 &3028310958607418820
 CapsuleCollider:
   m_ObjectHideFlags: 0

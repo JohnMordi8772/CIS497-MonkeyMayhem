@@ -46,7 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 6
   itemDensity: 1
-  physicsEnabledDistance: 2
 --- !u!114 &779765533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +60,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 6
   itemDensity: 1
-  physicsEnabledDistance: 2
 --- !u!54 &1733208811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,7 +129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 6
   itemDensity: 1
-  physicsEnabledDistance: 2
 --- !u!54 &2067344544
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -201,7 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 6
   itemDensity: 1
-  physicsEnabledDistance: 2
 --- !u!1001 &5046621800224160711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,6 +252,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7276eca7821664e98b34fb52692c3b8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6599271472219001609, guid: 7276eca7821664e98b34fb52692c3b8e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -650433988561056430, guid: 7276eca7821664e98b34fb52692c3b8e, type: 3}
       propertyPath: m_IsActive
@@ -340,6 +340,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7276eca7821664e98b34fb52692c3b8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6599271472219001609, guid: 7276eca7821664e98b34fb52692c3b8e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -650433988561056430, guid: 7276eca7821664e98b34fb52692c3b8e, type: 3}
       propertyPath: m_IsActive
