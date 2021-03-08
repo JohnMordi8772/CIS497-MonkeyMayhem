@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8871631275165110397}
   m_Layer: 0
   m_Name: onion
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 3
   itemDensity: 0
-  physicsEnabledDistance: 2
 --- !u!135 &2515612020464931871
 SphereCollider:
   m_ObjectHideFlags: 0

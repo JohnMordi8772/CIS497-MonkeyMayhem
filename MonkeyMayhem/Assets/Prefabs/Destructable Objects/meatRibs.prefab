@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6337281991803722617}
   m_Layer: 0
   m_Name: meatRibs
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

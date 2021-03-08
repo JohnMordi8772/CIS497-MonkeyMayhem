@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5725064317223557825}
   m_Layer: 0
   m_Name: wineWhite
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 4
   itemDensity: 0
-  physicsEnabledDistance: 2
 --- !u!136 &-5508037007687266589
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8642491966643299543}
   m_Layer: 0
   m_Name: apple
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 3
   itemDensity: 0
-  physicsEnabledDistance: 2
 --- !u!135 &8642491966643299543
 SphereCollider:
   m_ObjectHideFlags: 0

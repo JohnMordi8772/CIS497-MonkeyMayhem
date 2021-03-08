@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5705326949086081166}
   m_Layer: 0
   m_Name: bottleMusterd
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

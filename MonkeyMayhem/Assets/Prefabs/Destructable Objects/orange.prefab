@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8730127263482831734}
   m_Layer: 0
   m_Name: orange
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 3
   itemDensity: 0
-  physicsEnabledDistance: 2
 --- !u!135 &-5938568910715110570
 SphereCollider:
   m_ObjectHideFlags: 0

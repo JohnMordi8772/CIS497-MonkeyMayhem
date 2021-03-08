@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6988335029645655465}
   m_Layer: 0
   m_Name: canOpen
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemDensity: 0
-  physicsEnabledDistance: 2
 --- !u!136 &3670058982023772962
 CapsuleCollider:
   m_ObjectHideFlags: 0

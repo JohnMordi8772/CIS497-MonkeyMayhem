@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6368005322096347511}
   m_Layer: 0
   m_Name: fish
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 5
   itemDensity: 3
-  physicsEnabledDistance: 2
 --- !u!136 &4578930509173762750
 CapsuleCollider:
   m_ObjectHideFlags: 0

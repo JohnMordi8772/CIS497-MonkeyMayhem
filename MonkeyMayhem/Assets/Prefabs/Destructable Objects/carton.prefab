@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6135000803923711497}
   m_Layer: 0
   m_Name: carton
-  m_TagString: Untagged
+  m_TagString: Produce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 4
   itemDensity: 2
-  physicsEnabledDistance: 2
 --- !u!65 &1457840225265620758
 BoxCollider:
   m_ObjectHideFlags: 0

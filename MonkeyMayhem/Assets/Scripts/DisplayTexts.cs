@@ -21,11 +21,11 @@ public class DisplayTexts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (GameEvent.gameOver == false) { scoreTextbox.text = "Score: " + player.GetComponent<PlayerController>().score.totalPoints; }
+        if(GameEvent.gameOver == false) { scoreTextbox.text = "Goal: 50000\nScore: " + player.GetComponent<PlayerController>().score.totalPoints; }
             
         
 
-        if(player.GetComponent<PlayerController>().score.totalPoints > 5000)
+        if(player.GetComponent<PlayerController>().score.totalPoints > 50000)
         {
             GameEvent.gameOver = true;
             timerTextbox.text = "Game Over! Press R to restart! You Win!!";
