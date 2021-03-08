@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameEvent : MonoBehaviour
 {
-    public static int timer = 180;
-    public static bool gameOver = false;
+    public static int timer;
+    public static bool gameOver;
+
+    private void Start()
+    {
+        timer = 180;
+        gameOver = false;
+    }
 
     void Update()
     {
