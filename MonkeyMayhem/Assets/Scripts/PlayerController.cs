@@ -16,14 +16,14 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         foreach (IObserver observer in observers)
         {
-            //observer.UpdateData(transform.position, cam.transform.forward);
+           // observer.UpdateData(transform.position, cam.transform.forward);
         }
     }
 
     public void RegisterObserver(IObserver observer)
     {
         observers.Add(observer);
-        //observer.UpdateData(transform.position, cam.transform.forward);
+       // observer.UpdateData(transform.position, cam.transform.forward);
     }
 
     public void RemoveObserver(IObserver observer)

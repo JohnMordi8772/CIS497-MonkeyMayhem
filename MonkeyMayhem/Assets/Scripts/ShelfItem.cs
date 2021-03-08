@@ -10,7 +10,6 @@ public class ShelfItem : ParticleBehavior
 {
     public override void InstantiateParticles(Vector3 pos, GameObject obj)
     {
-        obj.transform.parent.transform.Find("glass").GetComponent<Collider>().enabled = false;
         obj.transform.parent.transform.Find("glass").GetComponent<MeshRenderer>().enabled = false;
 
         GameObject shelf = Resources.Load<GameObject>("Particle Systems/Shelf Particles");

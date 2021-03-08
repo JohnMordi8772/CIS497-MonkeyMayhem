@@ -46,7 +46,13 @@ public class DestructableObject : MonoBehaviour, IObserver
         // Check for player collision
         if (collision.gameObject.tag == "Player")
         {
-            gameObject.GetComponent<Collider>().enabled = false;
+            player.GetComponent<PlayerController>().RemoveObserver(this);
+
+            Collider[] colliders = gameObject.GetComponents<Collider>();
+            foreach(Collider collider in colliders)
+            {
+                collider.enabled = false;
+            }
 
             foreach (Transform child in transform)
             {
@@ -82,27 +88,60 @@ public class DestructableObject : MonoBehaviour, IObserver
                     break;
             }
 
-            pb.InstantiateParticles(transform.position, this.gameObject);
+            pb.InstantiateParticles(collision.contacts[0].point, this.gameObject);
         }
     }
 
     [Tooltip("Distance player has to be to object to activate physics.")]
-    public float physicsEnabledDistance = 2f;
+    public float physicsEnabledDistance = 6f;
 
     public void UpdateData(Vector3 playerPos, Vector3 cameraDirection)
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerPos);
 
-        if (distanceToPlayer <= physicsEnabledDistance)
+        if (GetComponent<Collider>() == true)
         {
-            if (GetComponent<Collider>().enabled == false)
-                GetComponent<Collider>().enabled = true;
+            if (distanceToPlayer <= physicsEnabledDistance)
+            {
+                if (GetComponent<Collider>().enabled == false)
+                {
+                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    GetComponent<Collider>().enabled = true;
+                }
+            }
+            else
+            {
+                if (GetComponent<Collider>().enabled == true)
+                {
+                    //GetComponent<Rigidbody>().freezeRotation = true;
+                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                    GetComponent<Collider>().enabled = false;
+                }
+            }
         }
-        else
+        /*else
         {
-            if (GetComponent<Collider>().enabled == true)
-                GetComponent<Collider>().enabled = false;
-        }
+            if (distanceToPlayer <= physicsEnabledDistance)
+            {
+                //GameObject[] childrenColl = gameObject.transform.parent.transform.GetComponents<Collider>();
+
+                if (.enabled == false)
+                {
+                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    GetComponent<Collider>().enabled = true;
+                }
+            }
+            else
+            {
+                if (GetComponent<Collider>().enabled == true)
+                {
+                    //GetComponent<Rigidbody>().freezeRotation = true;
+                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                    GetComponent<Collider>().enabled = false;
+                }
+            }
+        }*/
+        
 
         // Debug.Log(Vector3.Angle(cameraDirection, transform.position));
     }
