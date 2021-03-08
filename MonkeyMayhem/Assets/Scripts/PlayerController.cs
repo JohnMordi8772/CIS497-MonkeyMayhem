@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour, ISubject
         else if (collision.gameObject.CompareTag("Containers"))
         {
             score = new Containers(score);
-            
+            Destroy(collision.gameObject);
         }
     }
 }
