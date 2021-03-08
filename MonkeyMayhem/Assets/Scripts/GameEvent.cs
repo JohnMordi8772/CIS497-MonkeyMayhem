@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameEvent : MonoBehaviour
 {
-    public static int timer = 180;
+    public static int timer = 1;
     public static bool gameOver = false;
     public static bool restart = false;
 
