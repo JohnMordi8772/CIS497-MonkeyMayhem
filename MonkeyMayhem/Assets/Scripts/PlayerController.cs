@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour, ISubject
     public AudioClip[] monkeySounds;
     public AudioSource backGroundMusic;
     private bool mime = false;
-    public static Score score;
+    public Score score;
 
     public void NotifyObservers()
     {
@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour, ISubject
     void Awake()
     {
         anim = transform.Find("MrMo_A").GetComponent<Animator>();
+        score = new Score();
         //cam = transform.Find("Main Camera").GetComponent<Camera>();
     }
 
@@ -131,14 +132,12 @@ public class PlayerController : MonoBehaviour, ISubject
     {
         if (collision.gameObject.CompareTag("Produce"))
         {
-            score = new Produce();
-            score.AddPoints();
-            
+            score = new Produce(score);
+            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Containers"))
         {
-            score = new Containers();
-            score.AddPoints();
+            score = new Containers(score);
             
         }
     }

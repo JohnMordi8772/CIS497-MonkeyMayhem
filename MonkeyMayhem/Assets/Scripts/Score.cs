@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Score
+public class Score
 {
-    public int totalPoints = 0;
-
-    public abstract void AddPoints();
+    public virtual int totalPoints { get; set; } = 0;
 }

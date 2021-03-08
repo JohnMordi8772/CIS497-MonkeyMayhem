@@ -4977,6 +4977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: apple
       objectReference: {fileID: 0}
+    - target: {fileID: 5635872323100831049, guid: 9ddb5feef5212ec4bb6d69fe9d03c016, type: 3}
+      propertyPath: m_TagString
+      value: Produce
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ddb5feef5212ec4bb6d69fe9d03c016, type: 3}
 --- !u!1 &799173020
@@ -5911,6 +5915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427cbdc0e4187cb4abb78e0c4b17a837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1548319393}
   scoreTextbox: {fileID: 1376763503}
   timerTextbox: {fileID: 1393519691}
 --- !u!4 &927185377
@@ -7639,6 +7644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cheese
       objectReference: {fileID: 0}
+    - target: {fileID: 2470829765745614028, guid: 172ebcfaedaf1ef44bb1a0e0f6178fc2, type: 3}
+      propertyPath: m_TagString
+      value: Produce
+      objectReference: {fileID: 0}
     - target: {fileID: 2954913551666038390, guid: 172ebcfaedaf1ef44bb1a0e0f6178fc2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8839,6 +8848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottleMusterd
       objectReference: {fileID: 0}
+    - target: {fileID: 6706500569599154071, guid: 74d1888008e58004e9ddb3983a020a61, type: 3}
+      propertyPath: m_TagString
+      value: Produce
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d1888008e58004e9ddb3983a020a61, type: 3}
 --- !u!1001 &1369480974
@@ -9357,6 +9370,10 @@ PrefabInstance:
     - target: {fileID: 6706500569599154071, guid: 74d1888008e58004e9ddb3983a020a61, type: 3}
       propertyPath: m_Name
       value: bottleMusterd (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706500569599154071, guid: 74d1888008e58004e9ddb3983a020a61, type: 3}
+      propertyPath: m_TagString
+      value: Produce
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d1888008e58004e9ddb3983a020a61, type: 3}
@@ -12438,6 +12455,10 @@ PrefabInstance:
     - target: {fileID: 5046621801931995285, guid: 425c21259ff3fd943874db05f7a7750d, type: 3}
       propertyPath: m_Name
       value: Shelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046621801931995285, guid: 425c21259ff3fd943874db05f7a7750d, type: 3}
+      propertyPath: m_TagString
+      value: Containers
       objectReference: {fileID: 0}
     - target: {fileID: 5046621801931995286, guid: 425c21259ff3fd943874db05f7a7750d, type: 3}
       propertyPath: m_RootOrder

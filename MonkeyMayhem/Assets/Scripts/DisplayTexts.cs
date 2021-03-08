@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class DisplayTexts : MonoBehaviour
 {
-    
 
+    public GameObject player;
     public Text scoreTextbox;
     public Text timerTextbox;
 
@@ -20,7 +20,7 @@ public class DisplayTexts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreTextbox.text = "Score: " + PlayerController.score.totalPoints;
+        scoreTextbox.text = "Score: " + player.GetComponent<PlayerController>().score.totalPoints;
         timerTextbox.text = "TIME: " + GameEvent.timer;
     }
 

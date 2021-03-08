@@ -5,6 +5,5 @@ using UnityEngine;
 public abstract class PlayerDecorator : Score
 {
 
-    public override abstract void AddPoints();
-
+    public override abstract int totalPoints { get; set; }
 }

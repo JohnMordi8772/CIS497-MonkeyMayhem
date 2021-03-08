@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Produce : PlayerDecorator
 {
+    public Score score;
 
-    public int pointsToAdd = 15;
-
-
-    public override void AddPoints()
+    public Produce(Score score)
     {
-        totalPoints += pointsToAdd;
+        this.score = score;
     }
+
+    public override int totalPoints
+    {
+        get
+        {
+            return score.totalPoints + 15;
+        }
+        set
+        {
+            score.totalPoints = value;
+        }
+    }
+
 }

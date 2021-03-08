@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class Containers : PlayerDecorator
 {
-    public static int pointsToAdd = 10;
+    public Score score;
 
-    public override void AddPoints()
+    public Containers(Score score)
     {
-        totalPoints += pointsToAdd;
+        this.score = score;
+    }
+
+    public override int totalPoints
+    {
+        get
+        {
+            return score.totalPoints + 50;
+        }
+        set
+        {
+            score.totalPoints = value;
+        }
     }
 }
