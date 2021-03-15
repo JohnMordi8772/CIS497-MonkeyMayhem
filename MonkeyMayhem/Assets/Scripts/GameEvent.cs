@@ -1,3 +1,9 @@
+/*
+ * Luke Alcazar
+ * GameEvent.cs
+ * Project 2
+ * Handles the restart on a game over
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

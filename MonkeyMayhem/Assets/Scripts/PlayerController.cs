@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * John Mordi, Ashton Lively, Luke Alcazar
+ * PlayerController.cs
+ * Project 2
+ * Functions and variables necessary to player controls and the character itself, as well as win/loss conditions
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

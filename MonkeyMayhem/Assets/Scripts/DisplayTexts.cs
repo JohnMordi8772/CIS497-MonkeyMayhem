@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Luke Alcazar, John Mordi
+ * DisplayText.cs
+ * Project 2
+ * Handles win/loss conditions and adjusts text objects accordingly
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

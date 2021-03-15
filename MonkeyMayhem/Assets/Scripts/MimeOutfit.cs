@@ -1,3 +1,9 @@
+/*
+ * John Mordi
+ * MimeOutfit.cs
+ * Project 2
+ * Ensures mime powerup goes into effect
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,9 @@
+/*
+ * John Mordi
+ * Tutorial.cs
+ * Project 2
+ * Plays tutorial audio when game starts
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

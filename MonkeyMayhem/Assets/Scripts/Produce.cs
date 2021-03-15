@@ -1,3 +1,9 @@
+/*
+ * Luke Alcazar, John Mordi
+ * Produce.cs
+ * Project 2
+ * increments score in the case of a produce object
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
