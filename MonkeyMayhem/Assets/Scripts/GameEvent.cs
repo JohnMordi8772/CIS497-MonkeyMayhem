@@ -15,6 +15,8 @@ public class GameEvent : MonoBehaviour
     public static bool gameOver = false;
     public static bool restart = false;
 
+    public GameObject pause;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -27,7 +29,19 @@ public class GameEvent : MonoBehaviour
             
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                pause.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                pause.SetActive(false);
+            }
+        }
     }
 
 }
