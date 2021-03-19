@@ -154,8 +154,15 @@ public class PlayerController : MonoBehaviour, ISubject
         }
         else if (collision.gameObject.CompareTag("Containers"))
         {
+            anim.SetBool("Big Hit", true);
             score = new Containers(score);
             Destroy(collision.gameObject);
+            Invoke("EndBigHit", 1);
         }
+    }
+
+    void EndBigHit()
+    {
+        anim.SetBool("Big Hit", false);
     }
 }
