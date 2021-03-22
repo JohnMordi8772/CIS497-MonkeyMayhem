@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 
 public class GameEvent : MonoBehaviour
 {
-    public static int timer = 180;
+    public static int timer = 210;
     public static bool gameOver = false;
     public static bool restart = false;
 
@@ -24,7 +24,7 @@ public class GameEvent : MonoBehaviour
             restart = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             gameOver = false;
-            timer = 180;
+            timer = 210;
             restart = false;
             
         }

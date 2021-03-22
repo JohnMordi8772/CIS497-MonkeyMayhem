@@ -8,6 +8,8 @@ TagManager:
   - Timer
   - Containers
   - Produce
+  - TutorialLine
+  - Wall
   layers:
   - Default
   - TransparentFX

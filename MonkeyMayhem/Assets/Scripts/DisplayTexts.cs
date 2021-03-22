@@ -19,7 +19,7 @@ public class DisplayTexts : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine("countdown");
+        //StartCoroutine("Countdown");
         scoreTextbox.text = "Score: 0";
         
     }
@@ -46,7 +46,7 @@ public class DisplayTexts : MonoBehaviour
     }
 
 
-    public IEnumerator countdown()
+    public IEnumerator Countdown()
     {
         while (GameEvent.timer >= 0 && !GameEvent.gameOver)
         {

@@ -159,6 +159,25 @@ public class PlayerController : MonoBehaviour, ISubject
             Destroy(collision.gameObject);
             Invoke("EndBigHit", 1);
         }
+        else if(collision.gameObject.CompareTag("Wall"))
+        {
+            if (Input.GetKey(KeyCode.W) && !GameEvent.gameOver)
+            {
+                gameObject.transform.Translate(Vector3.left * -3);
+            }
+            if (Input.GetKey(KeyCode.A) && !GameEvent.gameOver)
+            {
+                gameObject.transform.Translate(Vector3.back * -3);
+            }
+            if (Input.GetKey(KeyCode.S) && !GameEvent.gameOver)
+            {
+                gameObject.transform.Translate(Vector3.right * -3);
+            }
+            if (Input.GetKey(KeyCode.D) && !GameEvent.gameOver)
+            {
+                gameObject.transform.Translate(Vector3.forward * -3);
+            }
+        }
     }
 
     void EndBigHit()
